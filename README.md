@@ -4,26 +4,33 @@
 
 - [Space Survive](#🚀space-survive)
   - [Sommaire](#sommaire)
-- [I-Description](#1description)
-- [II-Fonctionnalités Principales](#2fonctionnalités-principales)
-- [III-Comment Jouer](#3comment-jouer)
+- [I-Description](#1🕹️description)
+- [II-Fonctionnalités Principales](#2📝fonctionnalités)
+- [III-C3](#3c3)
 - [IV-Installation](#4installation)
 
-## 1.Description
-🕹️
-## 2.Fonctionnalités Principales
-📝
+## 1.🕹️Description
+Dans ce jeu, prenez le contrôle d'un vaisseau spatial futuriste évoluant au sein d'une série de champs d'astéroïdes dans l'immensité de l'espace. Votre mission consiste à naviguer habilement à travers ces champs dangereux, en évitant habilement les collisions avec les astéroïdes. Affûtez vos compétences de pilotage et explorez l'infini spatial tout en relevant le défi de survie au cœur de ce périple cosmique.
+## 2.📝Fonctionnalités
+📝 Des astéroïdes apparaissent en haut et fonce tout droit en bas (Attention à bien
+détruire l’astéroïde lorsqu’il sort de l’écran)
+Si un astéroïde collisionne avec le joueur, la partie est perdue
+Avoir un menu: Jouer et Quitter (donc 2 scenes)
+
 ## 3.C3
 
-🎥 La caméra ne bouge elle reste fixe, donc on ne va pas gérer le niveau.
+### 🎥 Camera
+La caméra ne bouge elle reste fixe, donc on ne va pas gérer le niveau.
 
-⌨ Le joueur aura des contrôles pour se mouvoir:
+### ⌨ Controls
+Le joueur aura des contrôles pour se mouvoir:
 - Z: Avant
 - S: Arrière
 - Q: Gauche
 - D: Droite
 
-🚀 Le joueur ne peut que se déplacer et éviter les astéroîdes pour survivre le plus
+### 🚀 Character
+Le joueur ne peut que se déplacer et éviter les astéroîdes pour survivre le plus
 longtemps possible.
 
 ## 4.Installation
