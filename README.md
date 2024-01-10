@@ -18,10 +18,10 @@
 🎥 La caméra ne bouge elle reste fixe, donc on ne va pas gérer le niveau.
 
 ⌨ Le joueur aura des contrôles pour se mouvoir:
-Z: Avant
-S: Arrière
-Q: Gauche
-D: Droite
+- Z: Avant
+- S: Arrière
+- Q: Gauche
+- D: Droite
 
 🚀 Le joueur ne peut que se déplacer et éviter les astéroîdes pour survivre le plus
 longtemps possible.
