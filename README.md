@@ -1,8 +1,8 @@
-# Space Survive
+# 🚀Space Survive
 
 ## Sommaire
 
-- [Space Survive](#space-survive)
+- [Space Survive](#🚀space-survive)
   - [Sommaire](#sommaire)
 - [I-Description](#1description)
 - [II-Fonctionnalités Principales](#2fonctionnalités-principales)
@@ -10,10 +10,21 @@
 - [IV-Installation](#4installation)
 
 ## 1.Description
-
+🕹️
 ## 2.Fonctionnalités Principales
+📝
+## 3.C3
 
-## 3.Comment Jouer
+🎥 La caméra ne bouge elle reste fixe, donc on ne va pas gérer le niveau.
+
+⌨ Le joueur aura des contrôles pour se mouvoir:
+Z: Avant
+S: Arrière
+Q: Gauche
+D: Droite
+
+🚀 Le joueur ne peut que se déplacer et éviter les astéroîdes pour survivre le plus
+longtemps possible.
 
 ## 4.Installation
 
