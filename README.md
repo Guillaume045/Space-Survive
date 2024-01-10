@@ -13,6 +13,8 @@
 ## 1.🕹️Description
 Dans ce jeu, prenez le contrôle d'un vaisseau spatial futuriste évoluant au sein d'une série de champs d'astéroïdes dans l'immensité de l'espace. Votre mission consiste à naviguer habilement à travers ces champs dangereux, en évitant habilement les collisions avec les astéroïdes. Affûtez vos compétences de pilotage et explorez l'infini spatial tout en relevant le défi de survie au cœur de ce périple cosmique.
 
+[Image-02](/Image/Image-02.png)
+
 ---
 ## 2.📝Fonctionnalités
 - Des astéroïdes apparaissent en haut et fonce tout droit en bas (Attention à bien détruire l’astéroïde lorsqu’il sort de l’écran)
@@ -39,4 +41,4 @@ longtemps possible.
 ---
 ## 4.Installation
 
-https://github.com/Guillaume045/Space-Survive
+[Image-01](/Image/Image-01.png)
