@@ -2,46 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class mouvement : MonoBehaviour
+public class PilotageObjet : MonoBehaviour
 {
-    public float seed = 10;
+    public float vitesseAvant = 6f;
+    public float vitesseRotation = 160f;
 
     void Update()
     {
-        float moveX = Input.GetAxis("Horizontal");
-        float moveY = Input.GetAxis("Vertical");
+        // Obtenez les entrées des touches Z, S, Q et D
+        float inputAvant = Input.GetAxis("Vertical");
+        float inputRotation = Input.GetAxis("Horizontal");
 
-        Vector2 mouvement = new Vector2(moveX, moveY);
+        // Déplacement avant/arrière sur les axes X et Y
+        transform.Translate(new Vector3(inputRotation, inputAvant, 0f) * vitesseAvant * Time.deltaTime);
 
-        transform.Translate(mouvement * Time.deltaTime * seed);
+        // Rotation autour du centre de l'objet
+        RotateAroundCenter(Vector3.forward, -inputRotation * vitesseRotation * Time.deltaTime);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void RotateAroundCenter(Vector3 axis, float angle)
     {
-        // Vérifiez si la collision implique un objet avec un certain tag (vous pouvez modifier le tag selon vos besoins)
-        if (collision.gameObject.CompareTag("ObjetCollision"))
-        {
-            // Écrivez un message dans la console Unity
-            Debug.Log("Collision avec l'objet. Message affiché dans le terminal.");
+        Vector3 pivot = transform.position; // Utiliser la position actuelle de l'objet comme pivot
+        Quaternion rotation = Quaternion.AngleAxis(angle, axis);
+        Vector3 point = transform.position;
 
-            // Désactivez tous les objets avec le script mouvement attaché
-            DesactiverTousLesObjetsMouvement();
-        }
-
-        // Ajoutez le code de GestionCollision
-        Debug.Log("Collision détectée avec : " + collision.gameObject.name);
-    }
-
-    // Fonction pour désactiver tous les objets avec le script mouvement attaché
-    private void DesactiverTousLesObjetsMouvement()
-    {
-        // Récupérez tous les objets avec le script mouvement attaché dans la scène
-        mouvement[] objets = FindObjectsOfType<mouvement>();
-
-        // Parcourez chaque objet et désactivez-le
-        foreach (mouvement objet in objets)
-        {
-            objet.gameObject.SetActive(false);
-        }
+        // Déplacer l'objet vers le pivot, effectuer la rotation, puis revenir à la position initiale
+        transform.Translate(pivot - point, Space.World);
+        transform.rotation *= rotation;
+        transform.Translate(point - pivot, Space.World);
     }
 }
