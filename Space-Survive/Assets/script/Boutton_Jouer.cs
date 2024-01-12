@@ -6,17 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class Boutton_Jouer : MonoBehaviour
 {
-    public Button votreBouton;
+    // Le nom de la scène vers laquelle vous voulez changer
+    public string nomDeLaScene;
 
-    void Start()
+    // Mettez à jour est appelée une fois par frame
+    void Update()
     {
-        votreBouton.onClick.AddListener(TaskOnClick);
-    }
-
-    void TaskOnClick()
-    {
-        Debug.Log("Le bouton a été cliqué");
-        SceneManager.LoadScene(0);
-        Debug.Log("Vous avez changer de scene");
+        // Vérifie si le bouton que vous voulez utiliser est enfoncé (vous pouvez changer "Fire1" à la touche que vous préférez)
+        if (Input.GetButtonDown("Fire1"))
+        {
+            // Charge la nouvelle scène
+            SceneManager.LoadScene(0);
+        }
     }
 }

@@ -347,7 +347,7 @@ GameObject:
   - component: {fileID: 350928117}
   - component: {fileID: 350928116}
   - component: {fileID: 350928115}
-  - component: {fileID: 350928114}
+  - component: {fileID: 350928118}
   m_Layer: 5
   m_Name: Button jouer
   m_TagString: Untagged
@@ -375,19 +375,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -147.6}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &350928114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 350928112}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6fccaa8551aedc47b8a9e5f11e4d4f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  votreBouton: {fileID: 350928115}
 --- !u!114 &350928115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,6 +457,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 350928112}
   m_CullTransparentMesh: 1
+--- !u!114 &350928118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350928112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 916f729123cde094fb1b3f1c2b0e06ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nomDeLaScene: 
 --- !u!1 &453580928
 GameObject:
   m_ObjectHideFlags: 0
