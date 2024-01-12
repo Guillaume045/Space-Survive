@@ -2,36 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class meteore : MonoBehaviour
+public class Asteroid : MonoBehaviour
 {
-    public GameObject objetAParaitre; // L'objet que vous souhaitez faire apparaître
-    private Vector3 positionDepart;
+    public float asteroidSpeed = 5f; // DÃ©clarer la vitesse de l'astÃ©roÃ¯de
 
-    void Start()
+    private Vector2 randomDirection;
+
+    private void Start()
     {
-        // Enregistrez la position de départ
-        positionDepart = transform.position;
-
-        // Appelez la méthode ApparaitreObjet après un délai aléatoire
-        float delaiAleatoire = Random.Range(0.5f, 2f);
-        Invoke("ApparaitreObjet", delaiAleatoire);
+        // DÃ©finir une direction alÃ©atoire lors de la crÃ©ation de l'astÃ©roÃ¯de
+        float randomDirectionX = Random.Range(-1f, 1f);
+        float randomDirectionY = Random.Range(-1f, 1f);
+        randomDirection = new Vector2(randomDirectionX, randomDirectionY).normalized;
     }
 
-    void ApparaitreObjet()
+    private void Update()
     {
-        // Faites apparaître un nouvel objet à la position de départ
-        Instantiate(objetAParaitre, positionDepart, Quaternion.identity);
+        // DÃ©placer l'astÃ©roÃ¯de dans sa direction
+        transform.Translate(randomDirection * asteroidSpeed * Time.deltaTime);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnBecameInvisible()
     {
-        // Vérifie si l'objet en collision a un certain tag (vous pouvez modifier le tag selon vos besoins)
-        if (collision.gameObject.CompareTag("ObjetDetruit"))
-        {
-            // Détruit cet objet
-            Debug.Log("Collision détectée avec : " + collision.gameObject.name);
-            Destroy(gameObject);
-
-        }
+        // DÃ©truire l'astÃ©roÃ¯de s'il sort de l'Ã©cran
+        Destroy(gameObject);
     }
 }
