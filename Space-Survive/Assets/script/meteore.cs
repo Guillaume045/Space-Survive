@@ -4,34 +4,26 @@ using UnityEngine;
 
 public class meteore : MonoBehaviour
 {
-    public GameObject objetAParaitre; // L'objet que vous souhaitez faire apparaître
+    public GameObject objetAParaitre;
     private Vector3 positionDepart;
 
     void Start()
     {
-        // Enregistrez la position de départ
         positionDepart = transform.position;
-
-        // Appelez la méthode ApparaitreObjet après un délai aléatoire
-        float delaiAleatoire = Random.Range(0.5f, 2f);
+        float delaiAleatoire = Random.Range(0.3f, 1f);
         Invoke("ApparaitreObjet", delaiAleatoire);
     }
 
     void ApparaitreObjet()
     {
-        // Faites apparaître un nouvel objet à la position de départ
-        Instantiate(objetAParaitre, positionDepart, Quaternion.identity);
+        Debug.Log("Objet à instancier : " + objetAParaitre);
+
+        Quaternion rotationAleatoire = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f));
+        Instantiate(objetAParaitre, positionDepart, rotationAleatoire);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void OnBecameInvisible()
     {
-        // Vérifie si l'objet en collision a un certain tag (vous pouvez modifier le tag selon vos besoins)
-        if (collision.gameObject.CompareTag("ObjetDetruit"))
-        {
-            // Détruit cet objet
-            Debug.Log("Collision détectée avec : " + collision.gameObject.name);
-            Destroy(gameObject);
-
-        }
+        Destroy(gameObject);
     }
 }

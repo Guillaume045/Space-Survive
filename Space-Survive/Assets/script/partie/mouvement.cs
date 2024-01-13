@@ -13,11 +13,11 @@ public class PilotageObjet : MonoBehaviour
         float inputAvant = Input.GetAxis("Vertical");
         float inputRotation = Input.GetAxis("Horizontal");
 
-        // Déplacement avant/arrière sur les axes X et Y
-        transform.Translate(new Vector3(inputRotation, inputAvant, 0f) * vitesseAvant * Time.deltaTime);
-
         // Rotation autour du centre de l'objet
         RotateAroundCenter(Vector3.forward, -inputRotation * vitesseRotation * Time.deltaTime);
+
+        // Déplacement avant/arrière sur les axes X et Y
+        transform.Translate(new Vector3(inputRotation, inputAvant, 0f) * vitesseAvant * Time.deltaTime);
     }
 
     void RotateAroundCenter(Vector3 axis, float angle)
@@ -30,5 +30,11 @@ public class PilotageObjet : MonoBehaviour
         transform.Translate(pivot - point, Space.World);
         transform.rotation *= rotation;
         transform.Translate(point - pivot, Space.World);
+    }
+
+    // Fonction appelée lorsqu'il y a une collision
+    void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Collision avec : " + collision.gameObject.name);
     }
 }
