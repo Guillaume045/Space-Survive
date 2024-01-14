@@ -13,7 +13,7 @@
 ## 1.🕹️Description
 Dans ce jeu, prenez le contrôle d'un vaisseau spatial futuriste évoluant au sein d'une série de champs d'astéroïdes dans l'immensité de l'espace. Votre mission consiste à naviguer habilement à travers ces champs dangereux, en évitant habilement les collisions avec les astéroïdes. Affûtez vos compétences de pilotage et explorez l'infini spatial tout en relevant le défi de survie au cœur de ce périple cosmique.
 
-[Image-02](/Image/Image-02.png)
+![Image-02](/Image/Image-02.png)
 
 ---
 ## 2.📝Fonctionnalités
@@ -38,9 +38,9 @@ Le joueur aura des contrôles pour se mouvoir:
 Le joueur ne peut que se déplacer et éviter les astéroîdes pour survivre le plus
 longtemps possible.
 
-[Image-03](/Image/Image-03.png)
+![Image-03](/Image/Image-03.png)
 
 ---
 ## 4.Installation
 
-[Image-04](/Image/Image-04.png)
+![Image-04](/Image/Image-04.png)
