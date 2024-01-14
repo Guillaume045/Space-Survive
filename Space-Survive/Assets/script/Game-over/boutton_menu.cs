@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Boutton_Jouer : MonoBehaviour
+public class boutton_menu : MonoBehaviour
 {
     public Button votreBouton;
 
@@ -13,10 +13,18 @@ public class Boutton_Jouer : MonoBehaviour
         votreBouton.onClick.AddListener(TaskOnClick);
     }
 
+    void Update()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            SceneManager.LoadScene(1);
+        }
+    }
+
     void TaskOnClick()
     {
         //Debug.Log("Le bouton a été cliqué");
-        SceneManager.LoadScene(0);
-        Debug.Log("Vous aller en jeu");
+        SceneManager.LoadScene(1);
+        Debug.Log("Vous allez au menu");
     }
 }

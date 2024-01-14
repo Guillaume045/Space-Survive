@@ -10,7 +10,7 @@ public class meteore : MonoBehaviour
     void Start()
     {
         positionDepart = transform.position;
-        float delaiAleatoire = Random.Range(0.3f, 1f);
+        float delaiAleatoire = Random.Range(2f, 3f);
         Invoke("ApparaitreObjet", delaiAleatoire);
     }
 
