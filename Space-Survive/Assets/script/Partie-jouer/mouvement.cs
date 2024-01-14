@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PilotageObjet : MonoBehaviour
 {
@@ -9,26 +10,35 @@ public class PilotageObjet : MonoBehaviour
 
     void Update()
     {
-        // Obtenez les entrées des touches Z, S, Q et D
         float inputAvant = Input.GetAxis("Vertical");
         float inputRotation = Input.GetAxis("Horizontal");
-
-        // Déplacement avant/arrière sur les axes X et Y
-        transform.Translate(new Vector3(inputRotation, inputAvant, 0f) * vitesseAvant * Time.deltaTime);
-
-        // Rotation autour du centre de l'objet
         RotateAroundCenter(Vector3.forward, -inputRotation * vitesseRotation * Time.deltaTime);
+        transform.Translate(new Vector3(inputRotation, inputAvant, 0f) * vitesseAvant * Time.deltaTime);
     }
 
     void RotateAroundCenter(Vector3 axis, float angle)
     {
-        Vector3 pivot = transform.position; // Utiliser la position actuelle de l'objet comme pivot
+        Vector3 pivot = transform.position;
         Quaternion rotation = Quaternion.AngleAxis(angle, axis);
         Vector3 point = transform.position;
 
-        // Déplacer l'objet vers le pivot, effectuer la rotation, puis revenir à la position initiale
         transform.Translate(pivot - point, Space.World);
         transform.rotation *= rotation;
         transform.Translate(point - pivot, Space.World);
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("asteroid"))
+        {
+            Debug.Log("Collision avec : " + other.gameObject.name);
+            SceneManager.LoadScene(2);
+        }
+    }
+    /*
+    void OnTriggerExit2D(Collider2D other)
+    {
+        Debug.Log("Objet sort du trigger : " + other.gameObject.name);
+    }
+    */
 }
