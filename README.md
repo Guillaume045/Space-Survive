@@ -7,7 +7,6 @@
 - [I-Description](#1🕹️description)
 - [II-Fonctionnalités Principales](#2📝fonctionnalités)
 - [III-C3](#3c3)
-- [IV-Installation](#4installation)
 
 ---
 ## 1.🕹️Description
@@ -41,6 +40,5 @@ longtemps possible.
 ![Image-03](/Image/Image-03.png)
 
 ---
-## 4.Installation
 
 ![Image-04](/Image/Image-04.png)
