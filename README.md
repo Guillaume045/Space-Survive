@@ -38,7 +38,9 @@ Le joueur aura des contrôles pour se mouvoir:
 Le joueur ne peut que se déplacer et éviter les astéroîdes pour survivre le plus
 longtemps possible.
 
+[Image-03](/Image/Image-03.png)
+
 ---
 ## 4.Installation
 
-[Image-01](/Image/Image-01.png)
+[Image-04](/Image/Image-04.png)
